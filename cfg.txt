@@ -1,0 +1,14 @@
+start_symb : data_type main ( ) { declaration_list stmt_list }
+data_type : int | char | void
+declaration_list : data_type id_list ;
+id_list : declare_and_assignment | id_list , declare_and_assignment
+stmt_list : do_while_stmt | stmt_list do_while_stmt
+do_while_stmt : do { assignment_list } while ( cndtn ) ;
+declare_and_assignment : id = exp
+assignment_list : assignment | assignment_list assignment 
+assignment : id = exp ;
+exp : term | exp + term | exp - term
+term : factor | term * factor | term / factor
+factor : id | integer | ( exp )
+cndtn : exp relop exp
+relop : < | > | <= | >= 

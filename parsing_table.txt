@@ -1,0 +1,20 @@
+_	|	(	|	)	|	*	|	+	|	,	|	-	|	/	|	;	|	<	|	<=	|	=	|	>	|	>=	|	char	|	do	|	id	|	int	|	integer	|	main	|	void	|	while	|	{	|	}	|	
+start_symb	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	data_type main ( ) { declaration_list stmt_list } 	|	_	|	_	|	data_type main ( ) { declaration_list stmt_list } 	|	_	|	_	|	data_type main ( ) { declaration_list stmt_list } 	|	_	|	_	|	_	|	
+declaration_list	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	data_type id_list ; 	|	_	|	_	|	data_type id_list ; 	|	_	|	_	|	data_type id_list ; 	|	_	|	_	|	_	|	
+data_type	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	char 	|	_	|	_	|	int 	|	_	|	_	|	void 	|	_	|	_	|	_	|	
+id_list	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	declare_and_assignment id_list' 	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	
+id_list'	|	_	|	_	|	_	|	_	|	, declare_and_assignment id_list' 	|	_	|	_	|	^ 	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	
+stmt_list	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	do_while_stmt stmt_list' 	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	
+stmt_list'	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	do_while_stmt stmt_list' 	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	^ 	|	
+do_while_stmt	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	do { assignment_list } while ( cndtn ) ; 	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	
+declare_and_assignment	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	id = exp 	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	
+assignment_list	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	assignment assignment_list' 	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	
+assignment_list'	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	assignment assignment_list' 	|	_	|	_	|	_	|	_	|	_	|	_	|	^ 	|	
+assignment	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	id = exp ; 	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	
+exp	|	term exp' 	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	term exp' 	|	_	|	term exp' 	|	_	|	_	|	_	|	_	|	_	|	
+exp'	|	_	|	^ 	|	_	|	+ term exp' 	|	^ 	|	- term exp' 	|	_	|	^ 	|	^ 	|	^ 	|	_	|	^ 	|	^ 	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	
+term	|	factor term' 	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	factor term' 	|	_	|	factor term' 	|	_	|	_	|	_	|	_	|	_	|	
+term'	|	_	|	^ 	|	* factor term' 	|	^ 	|	^ 	|	^ 	|	/ factor term' 	|	^ 	|	^ 	|	^ 	|	_	|	^ 	|	^ 	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	
+factor	|	( exp ) 	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	id 	|	_	|	integer 	|	_	|	_	|	_	|	_	|	_	|	
+cndtn	|	exp relop exp 	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	exp relop exp 	|	_	|	exp relop exp 	|	_	|	_	|	_	|	_	|	_	|	
+relop	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	< 	|	<= 	|	_	|	> 	|	>= 	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	_	|	

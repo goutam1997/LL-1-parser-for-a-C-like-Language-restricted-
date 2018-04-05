@@ -1,0 +1,114 @@
+STACK ACTION											INPUT TO BE PARSED
+$ start_symb 		int
+$ } stmt_list declaration_list { ) ( main data_type 		int
+$ } stmt_list declaration_list { ) ( main int 		int
+$ } stmt_list declaration_list { ) ( main 		main
+$ } stmt_list declaration_list { ) ( 		(
+$ } stmt_list declaration_list { ) 		)
+$ } stmt_list declaration_list { 		{
+$ } stmt_list declaration_list 		int
+$ } stmt_list ; id_list data_type 		int
+$ } stmt_list ; id_list int 		int
+$ } stmt_list ; id_list 		id
+$ } stmt_list ; id_list' declare_and_assignment 		id
+$ } stmt_list ; id_list' exp = id 		id
+$ } stmt_list ; id_list' exp = 		=
+$ } stmt_list ; id_list' exp 		integer
+$ } stmt_list ; id_list' exp' term 		integer
+$ } stmt_list ; id_list' exp' term' factor 		integer
+$ } stmt_list ; id_list' exp' term' integer 		integer
+$ } stmt_list ; id_list' exp' term' 		,
+$ } stmt_list ; id_list' exp' ^ 		,
+$ } stmt_list ; id_list' exp' 		,
+$ } stmt_list ; id_list' ^ 		,
+$ } stmt_list ; id_list' 		,
+$ } stmt_list ; id_list' declare_and_assignment , 		,
+$ } stmt_list ; id_list' declare_and_assignment 		id
+$ } stmt_list ; id_list' exp = id 		id
+$ } stmt_list ; id_list' exp = 		=
+$ } stmt_list ; id_list' exp 		integer
+$ } stmt_list ; id_list' exp' term 		integer
+$ } stmt_list ; id_list' exp' term' factor 		integer
+$ } stmt_list ; id_list' exp' term' integer 		integer
+$ } stmt_list ; id_list' exp' term' 		;
+$ } stmt_list ; id_list' exp' ^ 		;
+$ } stmt_list ; id_list' exp' 		;
+$ } stmt_list ; id_list' ^ 		;
+$ } stmt_list ; id_list' 		;
+$ } stmt_list ; ^ 		;
+$ } stmt_list ; 		;
+$ } stmt_list 		do
+$ } stmt_list' do_while_stmt 		do
+$ } stmt_list' ; ) cndtn ( while } assignment_list { do 		do
+$ } stmt_list' ; ) cndtn ( while } assignment_list { 		{
+$ } stmt_list' ; ) cndtn ( while } assignment_list 		id
+$ } stmt_list' ; ) cndtn ( while } assignment_list' assignment 		id
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp = id 		id
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp = 		=
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp 		id
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp' term 		id
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp' term' factor 		id
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp' term' id 		id
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp' term' 		+
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp' ^ 		+
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp' 		+
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp' term + 		+
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp' term 		integer
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp' term' factor 		integer
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp' term' integer 		integer
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp' term' 		;
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp' ^ 		;
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp' 		;
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; ^ 		;
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; 		;
+$ } stmt_list' ; ) cndtn ( while } assignment_list' 		id
+$ } stmt_list' ; ) cndtn ( while } assignment_list' assignment 		id
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp = id 		id
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp = 		=
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp 		id
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp' term 		id
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp' term' factor 		id
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp' term' id 		id
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp' term' 		-
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp' ^ 		-
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp' 		-
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp' term - 		-
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp' term 		integer
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp' term' factor 		integer
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp' term' integer 		integer
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp' term' 		;
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp' ^ 		;
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; exp' 		;
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; ^ 		;
+$ } stmt_list' ; ) cndtn ( while } assignment_list' ; 		;
+$ } stmt_list' ; ) cndtn ( while } assignment_list' 		}
+$ } stmt_list' ; ) cndtn ( while } ^ 		}
+$ } stmt_list' ; ) cndtn ( while } 		}
+$ } stmt_list' ; ) cndtn ( while 		while
+$ } stmt_list' ; ) cndtn ( 		(
+$ } stmt_list' ; ) cndtn 		id
+$ } stmt_list' ; ) exp relop exp 		id
+$ } stmt_list' ; ) exp relop exp' term 		id
+$ } stmt_list' ; ) exp relop exp' term' factor 		id
+$ } stmt_list' ; ) exp relop exp' term' id 		id
+$ } stmt_list' ; ) exp relop exp' term' 		>=
+$ } stmt_list' ; ) exp relop exp' ^ 		>=
+$ } stmt_list' ; ) exp relop exp' 		>=
+$ } stmt_list' ; ) exp relop ^ 		>=
+$ } stmt_list' ; ) exp relop 		>=
+$ } stmt_list' ; ) exp >= 		>=
+$ } stmt_list' ; ) exp 		integer
+$ } stmt_list' ; ) exp' term 		integer
+$ } stmt_list' ; ) exp' term' factor 		integer
+$ } stmt_list' ; ) exp' term' integer 		integer
+$ } stmt_list' ; ) exp' term' 		)
+$ } stmt_list' ; ) exp' ^ 		)
+$ } stmt_list' ; ) exp' 		)
+$ } stmt_list' ; ) ^ 		)
+$ } stmt_list' ; ) 		)
+$ } stmt_list' ; 		;
+$ } stmt_list' 		}
+$ } ^ 		}
+$ } 		}
+$ 		$
+Input Accepted...

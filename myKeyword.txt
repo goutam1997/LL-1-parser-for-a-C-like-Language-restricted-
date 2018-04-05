@@ -1,0 +1,7 @@
+else
+if
+for
+int
+float
+void
+return
